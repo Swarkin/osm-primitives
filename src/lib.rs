@@ -1,3 +1,5 @@
+/// Common metadata for an element
+///
 /// [Openstreetmap wiki](https://wiki.openstreetmap.org/wiki/Elements#Common_attributes)
 #[derive(Debug, PartialEq, Clone)]
 pub struct ElementMetadata {
@@ -22,6 +24,8 @@ pub struct ElementMetadata {
   pub timestamp: String,
 }
 
+/// A single point in space defined by its latitude, longitude and node id.
+///
 /// [Openstreetmap wiki](https://wiki.openstreetmap.org/wiki/Node)
 #[derive(Debug, PartialEq, Clone)]
 pub struct Node {
@@ -37,7 +41,7 @@ pub struct Node {
 ///
 /// [Openstreetmap wiki](https://wiki.openstreetmap.org/wiki/Way)
 ///
-/// Note that this library does not impose any upper limit for the size of a way, as the 2000-node-limit is considered an API limit.
+/// Note that this library does not impose any upper limit for the size of a way, as the 2000-node-limit is considered an API limit
 #[derive(Debug, PartialEq, Clone)]
 pub struct Way {
   pub nodes: Vec<ReferencedNode>,
