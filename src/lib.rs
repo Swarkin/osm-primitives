@@ -37,7 +37,7 @@ pub struct Node {
 ///
 /// [Openstreetmap wiki](https://wiki.openstreetmap.org/wiki/Way)
 ///
-/// Note that this library does not impose any upper limit for the size of a way, as the 2000-node-limit is considered an API limit
+/// Note that this library does not impose any upper limit for the size of a way, as the 2000-node-limit is considered an API limit.
 #[derive(Debug, PartialEq, Clone)]
 pub struct Way {
   pub nodes: Vec<ReferencedNode>,
