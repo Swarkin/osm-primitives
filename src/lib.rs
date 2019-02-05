@@ -1,44 +1,44 @@
 #[derive(Debug, PartialEq, Clone)]
 pub struct FeatureMetadata {
-  id: i64,
-  user: String,
-  uid: u64,
-  version: u32,
-  changeset: u64,
-  timestamp: String,
+  pub id: i64,
+  pub user: String,
+  pub uid: u64,
+  pub version: u32,
+  pub changeset: u64,
+  pub timestamp: String,
 }
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct Node {
-  lat: f64,
-  lon: f64,
-  metadata: FeatureMetadata,
-  tags: Vec<Tag>,
+  pub lat: f64,
+  pub lon: f64,
+  pub metadata: FeatureMetadata,
+  pub tags: Vec<Tag>,
 }
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct Way {
-  nodes: Vec<ReferencedNode>,
-  metadata: FeatureMetadata,
-  tags: Vec<Tag>,
+  pub nodes: Vec<ReferencedNode>,
+  pub metadata: FeatureMetadata,
+  pub tags: Vec<Tag>,
 }
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct Relation {
-  members: Vec<RelationMember>,
-  metadata: FeatureMetadata,
-  tags: Vec<Tag>,
+  pub members: Vec<RelationMember>,
+  pub metadata: FeatureMetadata,
+  pub tags: Vec<Tag>,
 }
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct ReferencedNode {
-  id: i64,
+  pub id: i64,
 }
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct Tag {
-  key: String,
-  value: String
+  pub key: String,
+  pub value: String
 }
 
 #[derive(Debug, PartialEq, Clone)]
@@ -50,8 +50,8 @@ pub enum ReferencedFeature {
 
 #[derive(Debug, PartialEq, Clone)]
 pub struct RelationMember {
-  role: String,
-  feature: ReferencedFeature,
+  pub role: String,
+  pub feature: ReferencedFeature,
 }
 
 #[derive(Debug, PartialEq, Clone)]
