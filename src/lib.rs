@@ -1,6 +1,6 @@
 #[derive(Debug, PartialEq, Clone)]
 pub struct FeatureMetadata {
-  pub id: i64,
+  pub id: u64,
   pub user: String,
   pub uid: u64,
   pub version: u32,
@@ -62,7 +62,7 @@ pub enum Feature {
 }
 
 impl Feature {
-  fn metadata(&self) -> &FeatureMetadata {
+  pub fn metadata(&self) -> &FeatureMetadata {
     match self {
       Feature::Node(me) => &me.metadata,
       Feature::Way(me) => &me.metadata,
