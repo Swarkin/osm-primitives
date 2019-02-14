@@ -106,3 +106,20 @@ impl Element {
   }
 }
 
+impl From<Node> for Element {
+  fn from(node: Node) -> Element {
+    Element::Node(node)
+  }
+}
+
+impl From<Way> for Element {
+  fn from(way: Way) -> Element {
+    Element::Way(way)
+  }
+}
+
+impl From<Relation> for Element {
+  fn from(relation: Relation) -> Element {
+    Element::Relation(relation)
+  }
+}
