@@ -1,8 +1,8 @@
 [package]
 name = "osm-primitives"
 version = "2.1.0"
-authors = ["Martijn Heil <m.heil375@gmail.com>"]
-edition = "2018"
+authors = ["Swarkin"]
+edition = "2021"
 description = "Primitives for the Openstreetmap data model"
 license = "MIT"
 
